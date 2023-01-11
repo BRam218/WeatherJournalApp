@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app {
+  display: grid;
+  color: #f0d43a;
+  justify-content: center;
+  gap: 0.625rem;
+  font-size: 1.25rem;
+  font-family: "Oswald", sans-serif;
+  background-image: url("images/clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.zip {
+  opacity: 70%;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.feel {
+  text-align: center;
+  justify-content: center;
+  height: 3.75rem;
+  width: 37.5rem;
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.entry {
+  background: rgba(59, 74, 107, 0.4);
+  margin-bottom: 1.25rem;
+  height: 15rem;
+  color: white;
+  padding-top: 0.625rem;
+  border-radius: 1.875rem;
+  text-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+#entryHolder {
+  display: grid;
+  grid-auto-rows: 5rem;
+  gap: 1.25rem;
+  grid-template-areas: "a a";
+  justify-content: space-evenly;
+}
+
+.myInput {
+  margin-bottom: 1.25rem;
+}
+
+#name {
+  font-size: 2.8125rem;
+  font-weight: 400;
+}
+
+#date {
+  font-size: 2.1875rem;
+  font-weight: 400;
+}
+
+#temp {
+  font-size: 2.8125rem;
+  font-weight: 400;
+}
+
+#content {
+  font-size: 2.1875rem;
+  font-weight: 400;
+}
+
+.headline {
+  text-align: center;
+  /* background-color: #3b4a6b; */
+  color: white;
+  height: 3.75rem;
+  text-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.title {
+  text-align: center;
+  padding-bottom: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  text-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.gen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display: block;
+  font-size: 1.6875rem;
+}
+
+input {
+  display: block;
+  height: 4.0625rem;
+  width: 100%;
+  background: #3b4a6b;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  border-radius: 1.875rem;
+  padding: 0.3125rem;
+  text-align: center;
+}
+
+button {
+  width: 25rem;
+  height: 5rem;
+  background: #3b4a6b;
+  color: white;
+  font-size: 1.625rem;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  border-radius: 1.875rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+@media (max-width: 450px) {
+  #app {
+    grid-template-areas:
+      "headline"
+      "zip"
+      "feeling"
+      "generate"
+      "entry";
+  }
+
+  .headline {
+    grid-area: headline;
+  }
+
+  .zip {
+    grid-area: zip;
+  }
+
+  .feel {
+    grid-area: feeling;
+    width: 100vw;
+  }
+
+  .gen {
+    grid-area: generate;
+  }
+
+  .entry {
+    grid-area: entry;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-device-width: 600px) and (max-device-width: 900px) {
+  #app {
+    grid-template-areas:
+      "headline"
+      "zip"
+      "feeling"
+      "generate"
+      "entry";
+  }
+
+  .headline {
+    grid-area: headline;
+  }
+
+  .zip {
+    grid-area: zip;
+    width: 90vw;
+  }
+
+  .feel {
+    grid-area: feeling;
+    width: 90vw;
+  }
+
+  .gen {
+    grid-area: generate;
+  }
+
+  .entry {
+    grid-area: entry;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+}
